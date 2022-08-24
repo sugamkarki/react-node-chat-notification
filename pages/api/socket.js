@@ -9,9 +9,17 @@ const SocketHandler = (req, res) => {
     res.socket.server.io = io;
 
     io.on("connection", (socket) => {
-      socket.on("input-change", (msg) => {
-        socket.broadcast.emit("update-input", msg);
+      console.log(`⚡: ${socket.id} user just connected!`);
+      socket.on("disconnect", () => {
+        console.log("🔥: A user disconnected");
       });
+    });
+    io.on("message", (data) => {
+      console.log(data);
+    });
+
+    io.on("disconnect", () => {
+      console.log("🔥: A user disconnected");
     });
   }
   res.end();
