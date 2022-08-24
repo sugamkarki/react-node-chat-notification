@@ -11,19 +11,21 @@ const SocketContext = createContext({
   messages: [],
 });
 
-function SocketsProvider() {
+function SocketsProvider(props) {
   const [username, setUsername] = useState("");
   const [roomId, setRoomId] = useState("");
   const [rooms, setRooms] = useState({});
   const [messages, setMessages] = useState([]);
   async function init() {
     await fetch("/api/socket");
-    socket = io.connect();
+    socket = io();
+    console.log(socket);
   }
   useEffect(() => {
     window.onfocus = function () {
       document.title = "Chat app";
     };
+    init();
   }, []);
 
   useEffect(() => {

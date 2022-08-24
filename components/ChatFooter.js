@@ -1,13 +1,15 @@
+// @ts-nocheck
 import React, { useState } from "react";
 import { useSockets } from "../context/socket.context";
-
+import EVENTS from "../config/events";
 const ChatFooter = () => {
-  const [message, setMessage] = useState("");
   const { socket, messages } = useSockets();
+  const [message, setMessage] = useState("");
   const handleSendMessage = (e) => {
     e.preventDefault();
+    console.log(socket);
     if (message.trim() && localStorage.getItem("userName")) {
-      socket.emit("message", {
+      socket.emit(EVENTS.CLIENT.MESSAGE, {
         text: message,
         name: localStorage.getItem("userName"),
         id: `${socket.id}${Math.random()}`,
