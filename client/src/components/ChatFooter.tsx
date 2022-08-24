@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import checkPageStatus from "../utils/functions";
 // @ts-ignore
 const ChatFooter = ({ socket }) => {
   const [message, setMessage] = useState("");
@@ -17,10 +18,12 @@ const ChatFooter = ({ socket }) => {
         id: `${socket.id}${Math.random()}`,
         socketID: socket.id,
       });
+      // @ts-ignore
+      checkPageStatus(message, localStorage.getItem("userName"));
     }
     setMessage("");
-    setMessage("");
   };
+
   return (
     <div className="chat__footer">
       <form className="form" onSubmit={handleSendMessage}>

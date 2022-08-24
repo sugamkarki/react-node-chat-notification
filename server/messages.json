@@ -1,0 +1,43 @@
+{
+  "messages": [
+    {
+      "text": "Hello!",
+      "name": "ChatAdmin",
+      "id": "abcd01"
+    },
+    {
+      "text": "Welcome to my chat application!💃🏻",
+      "name": "ChatAdmin",
+      "id": "defg02"
+    },
+    {
+      "text": "You can start chatting!📲",
+      "name": "ChatAdmin",
+      "id": "hijk03"
+    },
+    {
+      "text": "sswdawdadwadwa",
+      "name": "http://localhost:3000/chat",
+      "id": "f6OMRX8tMp7n-N4yAAAB0.6087717118173948",
+      "socketID": "f6OMRX8tMp7n-N4yAAAB"
+    },
+    {
+      "text": "Hello sir!",
+      "name": "sugamkarki",
+      "id": "R52UnU-zTlhGsCZuAAAB0.2374466917227953",
+      "socketID": "R52UnU-zTlhGsCZuAAAB"
+    },
+    {
+      "text": "Hiii pumpkin!",
+      "name": "sugamkarki",
+      "id": "M9n7oaXUtoXEHsLjAAAF0.8121754201960414",
+      "socketID": "M9n7oaXUtoXEHsLjAAAF"
+    },
+    {
+      "text": "ssup babe",
+      "name": "http://localhost:3000/chat",
+      "id": "lFvlGeoqJyXB6fDxAAAD0.9285579715657417",
+      "socketID": "lFvlGeoqJyXB6fDxAAAD"
+    }
+  ]
+}

@@ -8,6 +8,14 @@ const ChatPage = ({ socket }) => {
   const [typingStatus, setTypingStatus] = useState("");
   const lastMessageRef = useRef(null);
   useEffect(() => {
+    function fetchMessages() {
+      fetch("http://localhost:4000/api")
+        .then((response) => response.json())
+        .then((data) => setMessages(data.messages));
+    }
+    fetchMessages();
+  }, []);
+  useEffect(() => {
     // @ts-ignore
     socket.on("messageResponse", (data) => setMessages([...messages, data]));
   }, [socket, messages]);
