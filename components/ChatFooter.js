@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import { useSockets } from "../context/socket.context";
 
-const ChatFooter = ({ socket }) => {
+const ChatFooter = () => {
   const [message, setMessage] = useState("");
-
+  const { socket, messages } = useSockets();
   const handleSendMessage = (e) => {
     e.preventDefault();
-    console.log(message);
     if (message.trim() && localStorage.getItem("userName")) {
       socket.emit("message", {
         text: message,
