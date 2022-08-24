@@ -5,13 +5,13 @@ const EVENTS = {
     SEND_ROOM_MESSAGE: "SEND_ROOM_MESSAGE",
     JOIN_ROOM: "JOIN_ROOM",
     MESSAGE: "message",
-
   },
   SERVER: {
     ROOMS: "ROOMS",
     MESSAGE: "message",
     ROOM_MESSAGE: "ROOM_MESSAGE",
     MESSAGE_RESPONSE: "messageResponse",
+    CONNECTION: "connection",
   },
 };
 
