@@ -22,7 +22,7 @@ const ChatPage = ({ socket }) => {
       setTypingStatus(data);
       setTimeout(() => {
         setTypingStatus("");
-      }, 1000);
+      }, 500);
     });
   }, [socket]);
   return (
@@ -33,7 +33,6 @@ const ChatPage = ({ socket }) => {
           messages={messages}
           typingStatus={typingStatus}
           // @ts-ignore
-
           lastMessageRef={lastMessageRef}
         />
         <ChatFooter socket={socket} />
