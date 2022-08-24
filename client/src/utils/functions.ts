@@ -1,4 +1,5 @@
-function sendNotification(message: string, user: string) {
+// @ts-ignore
+function sendNotification(message, user) {
   document.onvisibilitychange = () => {
     if (document.hidden) {
       const notification = new Notification("New message from Open Chat", {
@@ -12,8 +13,10 @@ function sendNotification(message: string, user: string) {
     }
   };
 }
-export default function checkPageStatus(message: string, user: string) {
-  if (user !== localStorage.getItem("userName")) {
+
+// @ts-ignore
+export default function checkPageStatus(message, user) {
+  if (user === localStorage.getItem("userName")) {
     if (!("Notification" in window)) {
       alert("This browser does not support system notifications!");
     } else if (Notification.permission === "granted") {
